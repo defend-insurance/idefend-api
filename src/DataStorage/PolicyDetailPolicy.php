@@ -13,188 +13,192 @@ use IDefendApi\Exception\ApiReplyExcetion;
 
 class PolicyDetailPolicy extends DataStorage
 {
-    /** @var string */
+    /** @var string|null */
     public $id;
-    /** @var string */
+    /** @var string|null */
     public $policy_no;
-    /** @var string */
+    /** @var string|null */
     public $payment_term;
-    /** @var string */
+    /** @var string|null */
     public $ins_term;
-    /** @var string */
+    /** @var string|null */
     public $installments;
-    /** @var string */
+    /** @var string|null */
     public $auto_model_id;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_engine_size;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_mfg_warr_term;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_mfg_warr_km;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_reg_date;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_odometer;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_purchase_date;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_purchase_price;
-    /** @var string */
+    /** @var string|null */
     public $vat_reclaimable;
-    /** @var string */
+    /** @var string|null */
     public $vat_included;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_mfg_inception;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_vin;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_reg_no;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_prev_owners_no;
-    /** @var string */
+    /** @var string|null */
     public $vehicle_model_derivative;
-    /** @var string */
+    /** @var string|null */
     public $customer_type;
-    /** @var string */
+    /** @var string|null */
     public $customer_title_id;
-    /** @var string */
+    /** @var string|null */
     public $customer_first_name;
-    /** @var string */
+    /** @var string|null */
     public $customer_last_name;
-    /** @var string */
+    /** @var string|null */
     public $customer_company_name;
-    /** @var string */
+    /** @var string|null */
     public $customer_id_no;
-    /** @var string */
+    /** @var string|null */
     public $customer_address;
-    /** @var string */
+    /** @var string|null */
     public $customer_address2;
-    /** @var string */
+    /** @var string|null */
     public $customer_city;
-    /** @var string */
+    /** @var string|null */
     public $customer_post_code;
-    /** @var string */
+    /** @var string|null */
     public $customer_tel;
-    /** @var string */
+    /** @var string|null */
     public $customer_email;
-    /** @var string */
+    /** @var string|null */
     public $customer_had_claims;
-    /** @var string */
+    /** @var string|null */
     public $insured_is_coverholder;
-    /** @var string */
+    /** @var string|null */
     public $insured_type;
-    /** @var string */
+    /** @var string|null */
     public $insured_title_id;
-    /** @var string */
+    /** @var string|null */
     public $insured_first_name;
-    /** @var string */
+    /** @var string|null */
     public $insured_last_name;
-    /** @var string */
+    /** @var string|null */
     public $insured_company_name;
-    /** @var string */
+    /** @var string|null */
     public $insured_id_no;
-    /** @var string */
+    /** @var string|null */
     public $insured_address;
-    /** @var string */
+    /** @var string|null */
     public $insured_address2;
-    /** @var string */
+    /** @var string|null */
     public $insured_city;
-    /** @var string */
+    /** @var string|null */
     public $insured_post_code;
-    /** @var string */
+    /** @var string|null */
     public $insured_tel;
-    /** @var string */
+    /** @var string|null */
     public $insured_email;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_is_coverholder;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_is_insured;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_type;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_title_id;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_first_name;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_last_name;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_company_name;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_id_no;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_address;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_address2;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_city;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_post_code;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_tel;
-    /** @var string */
+    /** @var string|null */
     public $beneficiary_email;
-    /** @var string */
+    /** @var string|null */
     public $owner_is_coverholder;
-    /** @var string */
+    /** @var string|null */
     public $owner_type;
-    /** @var string */
+    /** @var string|null */
     public $owner_title_id;
-    /** @var string */
+    /** @var string|null */
     public $owner_first_name;
-    /** @var string */
+    /** @var string|null */
     public $owner_last_name;
-    /** @var string */
+    /** @var string|null */
     public $owner_company_name;
-    /** @var string */
+    /** @var string|null */
     public $owner_id_no;
-    /** @var string */
+    /** @var string|null */
     public $owner_address;
-    /** @var string */
+    /** @var string|null */
     public $owner_address2;
-    /** @var string */
+    /** @var string|null */
     public $owner_city;
-    /** @var string */
+    /** @var string|null */
     public $owner_post_code;
-    /** @var string */
+    /** @var string|null */
     public $owner_tel;
-    /** @var string */
+    /** @var string|null */
     public $owner_email;
-    /** @var string */
+    /** @var string|null */
     public $policy_inception_date;
-    /** @var string */
+    /** @var string|null */
     public $policy_expiry_date;
-    /** @var string */
+    /** @var string|null */
     public $notes;
-    /** @var string */
+    /** @var string|null */
     public $product_id;
-    /** @var string */
+    /** @var string|null */
+    public $status_locked_on;
+    /** @var string|null */
     public $status_opened_on;
-    /** @var string */
+    /** @var string|null */
     public $status_certified_on;
-    /** @var string */
+    /** @var string|null */
     public $status_paid_on;
-    /** @var string */
+    /** @var string|null */
     public $status_canceled_on;
-    /** @var string */
+    /** @var string|null */
     public $cancellation_reason;
-    /** @var string */
+    /** @var string|null */
     public $cancellation_refund;
-    /** @var string */
+    /** @var string|null */
     public $premium;
-    /** @var string */
+    /** @var string|null */
     public $refund_paid_to;
-    /** @var string */
+    /** @var string|null */
     public $authorization_code_verified;
-    /** @var string */
+    /** @var string|null */
     public $created;
-    /** @var string */
+    /** @var string|null */
     public $coverage_id;
-    /** @var string */
+    /** @var string|null */
     public $coverage_name;
-    /** @var string */
+    /** @var string|null */
     public $int_model_id;
-    /** @var string */
+    /** @var string|null */
     public $payment_method;
+    /** @var string|null */
+    public $claim_limit;
 
 
     /**
@@ -213,7 +217,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getId(): string
+    public function getId(): ?string
     {
         return $this->id;
     }
@@ -231,7 +235,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPolicyNo(): string
+    public function getPolicyNo(): ?string
     {
         return $this->policy_no;
     }
@@ -249,7 +253,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPaymentTerm(): string
+    public function getPaymentTerm(): ?string
     {
         return $this->payment_term;
     }
@@ -267,7 +271,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsTerm(): string
+    public function getInsTerm(): ?string
     {
         return $this->ins_term;
     }
@@ -285,7 +289,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInstallments(): string
+    public function getInstallments(): ?string
     {
         return $this->installments;
     }
@@ -303,7 +307,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getAutoModelId(): string
+    public function getAutoModelId(): ?string
     {
         return $this->auto_model_id;
     }
@@ -321,7 +325,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleEngineSize(): string
+    public function getVehicleEngineSize(): ?string
     {
         return $this->vehicle_engine_size;
     }
@@ -339,7 +343,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleMfgWarrTerm(): string
+    public function getVehicleMfgWarrTerm(): ?string
     {
         return $this->vehicle_mfg_warr_term;
     }
@@ -357,7 +361,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleMfgWarrKm(): string
+    public function getVehicleMfgWarrKm(): ?string
     {
         return $this->vehicle_mfg_warr_km;
     }
@@ -375,7 +379,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleRegDate(): string
+    public function getVehicleRegDate(): ?string
     {
         return $this->vehicle_reg_date;
     }
@@ -393,7 +397,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleOdometer(): string
+    public function getVehicleOdometer(): ?string
     {
         return $this->vehicle_odometer;
     }
@@ -411,7 +415,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehiclePurchaseDate(): string
+    public function getVehiclePurchaseDate(): ?string
     {
         return $this->vehicle_purchase_date;
     }
@@ -429,7 +433,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehiclePurchasePrice(): string
+    public function getVehiclePurchasePrice(): ?string
     {
         return $this->vehicle_purchase_price;
     }
@@ -447,7 +451,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVatReclaimable(): string
+    public function getVatReclaimable(): ?string
     {
         return $this->vat_reclaimable;
     }
@@ -465,7 +469,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVatIncluded(): string
+    public function getVatIncluded(): ?string
     {
         return $this->vat_included;
     }
@@ -483,7 +487,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleMfgInception(): string
+    public function getVehicleMfgInception(): ?string
     {
         return $this->vehicle_mfg_inception;
     }
@@ -501,7 +505,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleVin(): string
+    public function getVehicleVin(): ?string
     {
         return $this->vehicle_vin;
     }
@@ -519,7 +523,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleRegNo(): string
+    public function getVehicleRegNo(): ?string
     {
         return $this->vehicle_reg_no;
     }
@@ -537,7 +541,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehiclePrevOwnersNo(): string
+    public function getVehiclePrevOwnersNo(): ?string
     {
         return $this->vehicle_prev_owners_no;
     }
@@ -555,7 +559,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getVehicleModelDerivative(): string
+    public function getVehicleModelDerivative(): ?string
     {
         return $this->vehicle_model_derivative;
     }
@@ -573,7 +577,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerType(): string
+    public function getCustomerType(): ?string
     {
         return $this->customer_type;
     }
@@ -591,7 +595,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerTitleId(): string
+    public function getCustomerTitleId(): ?string
     {
         return $this->customer_title_id;
     }
@@ -609,7 +613,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerFirstName(): string
+    public function getCustomerFirstName(): ?string
     {
         return $this->customer_first_name;
     }
@@ -627,7 +631,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerLastName(): string
+    public function getCustomerLastName(): ?string
     {
         return $this->customer_last_name;
     }
@@ -645,7 +649,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerCompanyName(): string
+    public function getCustomerCompanyName(): ?string
     {
         return $this->customer_company_name;
     }
@@ -663,7 +667,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerIdNo(): string
+    public function getCustomerIdNo(): ?string
     {
         return $this->customer_id_no;
     }
@@ -681,7 +685,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerAddress(): string
+    public function getCustomerAddress(): ?string
     {
         return $this->customer_address;
     }
@@ -699,7 +703,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerAddress2(): string
+    public function getCustomerAddress2(): ?string
     {
         return $this->customer_address2;
     }
@@ -717,7 +721,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerCity(): string
+    public function getCustomerCity(): ?string
     {
         return $this->customer_city;
     }
@@ -735,7 +739,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerPostCode(): string
+    public function getCustomerPostCode(): ?string
     {
         return $this->customer_post_code;
     }
@@ -753,7 +757,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerTel(): string
+    public function getCustomerTel(): ?string
     {
         return $this->customer_tel;
     }
@@ -771,7 +775,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerEmail(): string
+    public function getCustomerEmail(): ?string
     {
         return $this->customer_email;
     }
@@ -789,7 +793,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCustomerHadClaims(): string
+    public function getCustomerHadClaims(): ?string
     {
         return $this->customer_had_claims;
     }
@@ -807,7 +811,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredIsCoverholder(): string
+    public function getInsuredIsCoverholder(): ?string
     {
         return $this->insured_is_coverholder;
     }
@@ -825,7 +829,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredType(): string
+    public function getInsuredType(): ?string
     {
         return $this->insured_type;
     }
@@ -843,7 +847,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredTitleId(): string
+    public function getInsuredTitleId(): ?string
     {
         return $this->insured_title_id;
     }
@@ -861,7 +865,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredFirstName(): string
+    public function getInsuredFirstName(): ?string
     {
         return $this->insured_first_name;
     }
@@ -879,7 +883,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredLastName(): string
+    public function getInsuredLastName(): ?string
     {
         return $this->insured_last_name;
     }
@@ -897,7 +901,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredCompanyName(): string
+    public function getInsuredCompanyName(): ?string
     {
         return $this->insured_company_name;
     }
@@ -915,7 +919,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredIdNo(): string
+    public function getInsuredIdNo(): ?string
     {
         return $this->insured_id_no;
     }
@@ -933,7 +937,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredAddress(): string
+    public function getInsuredAddress(): ?string
     {
         return $this->insured_address;
     }
@@ -951,7 +955,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredAddress2(): string
+    public function getInsuredAddress2(): ?string
     {
         return $this->insured_address2;
     }
@@ -969,7 +973,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredCity(): string
+    public function getInsuredCity(): ?string
     {
         return $this->insured_city;
     }
@@ -987,7 +991,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredPostCode(): string
+    public function getInsuredPostCode(): ?string
     {
         return $this->insured_post_code;
     }
@@ -1005,7 +1009,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredTel(): string
+    public function getInsuredTel(): ?string
     {
         return $this->insured_tel;
     }
@@ -1023,7 +1027,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getInsuredEmail(): string
+    public function getInsuredEmail(): ?string
     {
         return $this->insured_email;
     }
@@ -1041,7 +1045,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryIsCoverholder(): string
+    public function getBeneficiaryIsCoverholder(): ?string
     {
         return $this->beneficiary_is_coverholder;
     }
@@ -1059,7 +1063,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryIsInsured(): string
+    public function getBeneficiaryIsInsured(): ?string
     {
         return $this->beneficiary_is_insured;
     }
@@ -1077,7 +1081,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryType(): string
+    public function getBeneficiaryType(): ?string
     {
         return $this->beneficiary_type;
     }
@@ -1095,7 +1099,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryTitleId(): string
+    public function getBeneficiaryTitleId(): ?string
     {
         return $this->beneficiary_title_id;
     }
@@ -1113,7 +1117,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryFirstName(): string
+    public function getBeneficiaryFirstName(): ?string
     {
         return $this->beneficiary_first_name;
     }
@@ -1131,7 +1135,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryLastName(): string
+    public function getBeneficiaryLastName(): ?string
     {
         return $this->beneficiary_last_name;
     }
@@ -1149,7 +1153,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryCompanyName(): string
+    public function getBeneficiaryCompanyName(): ?string
     {
         return $this->beneficiary_company_name;
     }
@@ -1167,7 +1171,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryIdNo(): string
+    public function getBeneficiaryIdNo(): ?string
     {
         return $this->beneficiary_id_no;
     }
@@ -1185,7 +1189,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryAddress(): string
+    public function getBeneficiaryAddress(): ?string
     {
         return $this->beneficiary_address;
     }
@@ -1203,7 +1207,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryAddress2(): string
+    public function getBeneficiaryAddress2(): ?string
     {
         return $this->beneficiary_address2;
     }
@@ -1221,7 +1225,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryCity(): string
+    public function getBeneficiaryCity(): ?string
     {
         return $this->beneficiary_city;
     }
@@ -1239,7 +1243,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryPostCode(): string
+    public function getBeneficiaryPostCode(): ?string
     {
         return $this->beneficiary_post_code;
     }
@@ -1257,7 +1261,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryTel(): string
+    public function getBeneficiaryTel(): ?string
     {
         return $this->beneficiary_tel;
     }
@@ -1275,7 +1279,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getBeneficiaryEmail(): string
+    public function getBeneficiaryEmail(): ?string
     {
         return $this->beneficiary_email;
     }
@@ -1293,7 +1297,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerIsCoverholder(): string
+    public function getOwnerIsCoverholder(): ?string
     {
         return $this->owner_is_coverholder;
     }
@@ -1311,7 +1315,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerType(): string
+    public function getOwnerType(): ?string
     {
         return $this->owner_type;
     }
@@ -1329,7 +1333,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerTitleId(): string
+    public function getOwnerTitleId(): ?string
     {
         return $this->owner_title_id;
     }
@@ -1347,7 +1351,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerFirstName(): string
+    public function getOwnerFirstName(): ?string
     {
         return $this->owner_first_name;
     }
@@ -1365,7 +1369,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerLastName(): string
+    public function getOwnerLastName(): ?string
     {
         return $this->owner_last_name;
     }
@@ -1383,7 +1387,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerCompanyName(): string
+    public function getOwnerCompanyName(): ?string
     {
         return $this->owner_company_name;
     }
@@ -1401,7 +1405,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerIdNo(): string
+    public function getOwnerIdNo(): ?string
     {
         return $this->owner_id_no;
     }
@@ -1419,7 +1423,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerAddress(): string
+    public function getOwnerAddress(): ?string
     {
         return $this->owner_address;
     }
@@ -1437,7 +1441,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerAddress2(): string
+    public function getOwnerAddress2(): ?string
     {
         return $this->owner_address2;
     }
@@ -1455,7 +1459,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerCity(): string
+    public function getOwnerCity(): ?string
     {
         return $this->owner_city;
     }
@@ -1473,7 +1477,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerPostCode(): string
+    public function getOwnerPostCode(): ?string
     {
         return $this->owner_post_code;
     }
@@ -1491,7 +1495,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerTel(): string
+    public function getOwnerTel(): ?string
     {
         return $this->owner_tel;
     }
@@ -1509,7 +1513,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getOwnerEmail(): string
+    public function getOwnerEmail(): ?string
     {
         return $this->owner_email;
     }
@@ -1527,7 +1531,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPolicyInceptionDate(): string
+    public function getPolicyInceptionDate(): ?string
     {
         return $this->policy_inception_date;
     }
@@ -1545,7 +1549,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPolicyExpiryDate(): string
+    public function getPolicyExpiryDate(): ?string
     {
         return $this->policy_expiry_date;
     }
@@ -1563,7 +1567,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getNotes(): string
+    public function getNotes(): ?string
     {
         return $this->notes;
     }
@@ -1581,9 +1585,27 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getProductId(): string
+    public function getProductId(): ?string
     {
         return $this->product_id;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getStatusLockedOn(): ?string
+    {
+        return $this->status_locked_on;
+    }
+
+    /**
+     * @param string|null $status_locked_on
+     * @return PolicyDetailPolicy
+     */
+    public function setStatusLockedOn(?string $status_locked_on): PolicyDetailPolicy
+    {
+        $this->status_locked_on = $status_locked_on;
+        return $this;
     }
 
     /**
@@ -1599,7 +1621,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getStatusOpenedOn(): string
+    public function getStatusOpenedOn(): ?string
     {
         return $this->status_opened_on;
     }
@@ -1617,7 +1639,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getStatusCertifiedOn(): string
+    public function getStatusCertifiedOn(): ?string
     {
         return $this->status_certified_on;
     }
@@ -1635,7 +1657,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getStatusPaidOn(): string
+    public function getStatusPaidOn(): ?string
     {
         return $this->status_paid_on;
     }
@@ -1653,7 +1675,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getStatusCanceledOn(): string
+    public function getStatusCanceledOn(): ?string
     {
         return $this->status_canceled_on;
     }
@@ -1671,7 +1693,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCancellationReason(): string
+    public function getCancellationReason(): ?string
     {
         return $this->cancellation_reason;
     }
@@ -1689,7 +1711,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCancellationRefund(): string
+    public function getCancellationRefund(): ?string
     {
         return $this->cancellation_refund;
     }
@@ -1707,7 +1729,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPremium(): string
+    public function getPremium(): ?string
     {
         return $this->premium;
     }
@@ -1725,7 +1747,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getRefundPaidTo(): string
+    public function getRefundPaidTo(): ?string
     {
         return $this->refund_paid_to;
     }
@@ -1743,7 +1765,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getAuthorizationCodeVerified(): string
+    public function getAuthorizationCodeVerified(): ?string
     {
         return $this->authorization_code_verified;
     }
@@ -1761,7 +1783,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCreated(): string
+    public function getCreated(): ?string
     {
         return $this->created;
     }
@@ -1779,7 +1801,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCoverageId(): string
+    public function getCoverageId(): ?string
     {
         return $this->coverage_id;
     }
@@ -1797,7 +1819,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getCoverageName(): string
+    public function getCoverageName(): ?string
     {
         return $this->coverage_name;
     }
@@ -1815,7 +1837,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getIntModelId(): string
+    public function getIntModelId(): ?string
     {
         return $this->int_model_id;
     }
@@ -1833,7 +1855,7 @@ class PolicyDetailPolicy extends DataStorage
     /**
      * @return string
      */
-    public function getPaymentMethod(): string
+    public function getPaymentMethod(): ?string
     {
         return $this->payment_method;
     }
@@ -1842,11 +1864,28 @@ class PolicyDetailPolicy extends DataStorage
      * @param string $payment_method
      * @return PolicyDetailPolicy
      */
-    public function setPaymentMethod(string $payment_method): PolicyDetailPolicy
+    public function setPaymentMethod(?string $payment_method): PolicyDetailPolicy
     {
         $this->payment_method = $payment_method;
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getClaimLimit(): ?string
+    {
+        return $this->claim_limit;
+    }
+
+    /**
+     * @param string|null $claim_limit
+     * @return PolicyDetailPolicy
+     */
+    public function setClaimLimit(?string $claim_limit): PolicyDetailPolicy
+    {
+        $this->claim_limit = $claim_limit;
+        return $this;
+    }
 
 }

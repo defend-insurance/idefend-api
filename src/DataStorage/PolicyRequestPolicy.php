@@ -14,6 +14,8 @@ use IDefendApi\Exception\ApiReplyExcetion;
 class PolicyRequestPolicy extends CoveragePolicy
 {
 
+    public $id;
+    public $policy_no;
     public $vehicle_vin;
     public $vehicle_reg_no;
     public $vehicle_prev_owners_no;
@@ -73,6 +75,7 @@ class PolicyRequestPolicy extends CoveragePolicy
     public $owner_tel;
     public $owner_email;
     public $notes;
+    public $premium;
 
     /**
      * @param array $array
@@ -114,6 +117,7 @@ class PolicyRequestPolicy extends CoveragePolicy
         foreach ($coverageGroup->Coverage as $key => $item) {
             if ($item->selected == 'true') {
                 $policyRequest->Coverage[] = clone $item;
+                $policyRequest->setPremium($item->premium);
             }
 
         }
@@ -1183,5 +1187,61 @@ class PolicyRequestPolicy extends CoveragePolicy
         $this->notes = $notes;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     * @return PolicyRequestPolicy
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPolicyNo()
+    {
+        return $this->policy_no;
+    }
+
+    /**
+     * @param mixed $policy_no
+     * @return PolicyRequestPolicy
+     */
+    public function setPolicyNo($policy_no)
+    {
+        $this->policy_no = $policy_no;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPremium()
+    {
+        return $this->premium;
+    }
+
+    /**
+     * @param mixed $premium
+     * @return PolicyRequestPolicy
+     */
+    public function setPremium($premium)
+    {
+
+        $this->premium = $premium;
+        return $this;
+    }
+
 
 }

@@ -35,6 +35,7 @@ class CoverageGroup extends DataStorage
     public static function __fromArray(array $array)
     {
         /** @var static $return */
+        unset($array['LoadingType']);
         $return = parent::__fromArray($array);
         return $return;
     }
@@ -171,7 +172,7 @@ class CoverageGroup extends DataStorage
         return false;
     }
 
-    public function selectCoverage($id, $premium = null)
+    public function selectCoverage($id)
     {
         $selected = null;
         $select = null;
@@ -189,13 +190,6 @@ class CoverageGroup extends DataStorage
                 $this->Coverage[$selected]->setSelected('false');
             }
             $this->Coverage[$select]->setSelected('true');
-            if (!is_null($premium)) {
-                if ((floatval($this->Coverage[$select]->magic_figures->getMin()) > floatval($premium)) || (floatval($this->Coverage[$select]->magic_figures->getMax()) < floatval($premium))) {
-                    throw new \InvalidArgumentException("Premium range is " . $this->Coverage[$select]->magic_figures->getMin() . " - " . $this->Coverage[$select]->magic_figures->getMax());
-                }
-                $this->Coverage[$select]->setPremium($premium);
-            }
-
             return true;
         }
         return false;

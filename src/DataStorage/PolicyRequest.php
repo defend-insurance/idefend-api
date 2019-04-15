@@ -175,4 +175,93 @@ class PolicyRequest extends DataStorage
         return false;
     }
 
+    public function importFromCoverageGroup(CoverageGroup $coverageGroup)
+    {
+
+        foreach (CoveragePolicy::getReflection() as $field)
+        {
+            $this->Policy->{$field}=$coverageGroup->Policy->{$field};
+        }
+        $this->Loading=array();
+        foreach ($coverageGroup->Loading as $loading)
+        {
+            $this->Loading[]=clone $loading;
+        }
+
+        $this->Extra=array();
+        foreach ($coverageGroup->Loading as $loading)
+        {
+            $this->Loading[]=clone $loading;
+        }
+        foreach ($coverageGroup->Extra as $extra)
+        {
+            $this->Extra[]=clone $extra;
+        }
+        foreach ($coverageGroup->Coverage as $coverage)
+        {
+            $this->Coverage[]=clone $coverage;
+        }
+
+        return $this;
+    }
+
+    public static function __fromQuote(PolicyDetail $policyDetail)
+    {
+
+        $policyRequest = new self();
+
+        $policyRequest->setPolicy(New PolicyRequestPolicy());
+
+        $reflection = PolicyRequestPolicy::getReflection();
+        foreach ($reflection as $field) {
+            $policyRequest->Policy->{$field} = $policyDetail->Policy->{$field};
+        }
+
+        $policyRequest->setCoverage(array($coverage = new Coverage()));
+        $coverage->id = $policyDetail->Policy->coverage_id;
+        $coverage->name = $policyDetail->Policy->coverage_name;
+        $coverage->premium = $policyDetail->Policy->premium;
+        $coverage->selected = "true";
+        $coverage->product = $policyRequest->Policy->product_id;
+
+
+        foreach ($policyDetail->Loading as $loading) {
+            $policyRequest->Loading[] = $requestLoading = new Loading();
+            $requestLoading->value = $loading->name;
+            $requestLoading->type = $loading->type;
+            $requestLoading->selected = "true";
+        }
+
+
+        return $policyRequest;
+    }
+
+    public function setPremium($premium)
+    {
+        $premium = floatval($premium);
+
+        foreach ($this->Coverage as $coverage) {
+            if ($coverage->selected == "true") {
+                if (is_null($premium)) {
+                    $premium = floatval($coverage->premium);
+                }
+                if (($min = $coverage->magic_figures->min) && ($max = $coverage->magic_figures->max)) {
+                    if (($min > $premium) || ($max < $premium)) {
+                        throw new \InvalidArgumentException("Pemium $premium is not in range $min - $max");
+                    }
+                } else {
+                    if ($premium != floatval($coverage->premium)) {
+                        throw new \InvalidArgumentException("Pemium $premium have to be " . $coverage->premium);
+                    }
+                }
+                $this->Policy->setPremium($premium);
+                return $this;
+            }
+
+        }
+
+        throw new \InvalidArgumentException("Can not be set - No Coverage Selected");
+    }
+
+
 }

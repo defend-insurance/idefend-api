@@ -14,6 +14,8 @@ use IDefendApi\Service\Utils;
 
 class DataStorage
 {
+    protected static $classReflection = array();
+
     /**
      * @param $name
      * @param $value
@@ -34,10 +36,9 @@ class DataStorage
     public static function __fromArray(array $array)
     {
         $entity = new static();
-        $reflect = new \ReflectionClass(static::class);
-        $vars = $reflect->getProperties(\ReflectionProperty::IS_PUBLIC);
-        foreach ($vars as $reflectionProperty) {
-            $name = $reflectionProperty->getName();
+
+        $reflection=$entity::getReflection();
+        foreach ($reflection as $name) {
             $entity->__set($name, $array[$name]);
             unset($array[$name]);
         }
@@ -47,4 +48,33 @@ class DataStorage
 
         return $entity;
     }
+
+    /**
+     * @return array()
+     * @throws \ReflectionException
+     */
+    public static function getReflection()
+    {
+        if (!isset(static::$classReflection[static::class])) {
+            $reflect = new \ReflectionClass(static::class);
+            $fields=$reflect->getProperties(\ReflectionProperty::IS_PUBLIC);
+            $fieldNames=array();
+            foreach ($fields as $field)
+            {
+                $fieldNames[]=$field->getName();
+            }
+            static::$classReflection[static::class]=$fieldNames;
+        }
+        return static::$classReflection[static::class];
+    }
+
+    public static function checkField($fieldName)
+    {
+        if (in_array($fieldName, static::getReflection())) {
+            return true;
+        }
+        return false;
+    }
+
+
 }

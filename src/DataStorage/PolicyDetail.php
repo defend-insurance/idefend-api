@@ -24,6 +24,40 @@ class PolicyDetail extends DataStorage
     /** @var PolicyDetailLoading[] */
     public $Loading = array();
 
+
+    public function isSignable()
+    {
+        if ( !is_null($this->Policy->status_locked_on) &&
+           is_null($this->Policy->authorization_code_verified) &&
+           is_null($this->Policy->status_canceled_on))
+
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public function isCancelable()
+    {
+        if (
+           is_null($this->Policy->status_canceled_on))
+        {
+            return true;
+        }
+        return false;
+    }
+    public function isQuote()
+    {
+        if (
+        is_null($this->Policy->status_opened_on))
+        {
+            return true;
+        }
+        return false;
+    }
+
+
+
     /**
      * @param array $array
      * @return self

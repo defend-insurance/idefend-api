@@ -8,4 +8,4 @@ services:
     volumes:
       - ../:/var/www/html/
     environment:
-      XDEBUG_CONFIG: remote_host=host.docker.internal
+      XDEBUG_CONFIG: "remote_host=host.docker.internal var_display_max_depth=-1 var_display_max_children=-1 var_display_max_data=-1"

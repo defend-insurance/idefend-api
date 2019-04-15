@@ -45,6 +45,8 @@ class CoveragePolicy extends DataStorage
     public $vat_included = '';
     /** @var string */
     public $vat_reclaimable = '';
+    /** @var string|null  */
+    public $claim_limit="";
 
     /**
      * @param array $array
@@ -176,10 +178,10 @@ class CoveragePolicy extends DataStorage
     }
 
     /**
-     * @param string $vehicle_purchase_price
+     * @param string|null $vehicle_purchase_price
      * @return CoveragePolicy
      */
-    public function setVehiclePurchasePrice(string $vehicle_purchase_price): CoveragePolicy
+    public function setVehiclePurchasePrice(?string $vehicle_purchase_price): CoveragePolicy
     {
         $this->vehicle_purchase_price = $vehicle_purchase_price;
         return $this;
@@ -347,4 +349,21 @@ class CoveragePolicy extends DataStorage
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getClaimLimit(): string
+    {
+        return $this->claim_limit;
+    }
+
+    /**
+     * @param string|null $claim_limit
+     * @return CoveragePolicy
+     */
+    public function setClaimLimit(?string $claim_limit): CoveragePolicy
+    {
+        $this->claim_limit = $claim_limit;
+        return $this;
+    }
 }
